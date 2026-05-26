@@ -2,584 +2,1213 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - MyResume Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>Irma Sena Marliyana | Front-End Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Irma Sena Marliyana, Front-End Developer and Informatics Engineering student.">
+  <meta name="keywords" content="Irma Sena Marliyana, Front-End Developer, Portfolio, React, Web Developer, Informatics Student">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #14b8a6;
+      --dark: #0f172a;
+      --soft-dark: #1e293b;
+      --muted: #64748b;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+      --radius: 28px;
+    }
 
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.75);
+      padding: 18px 0;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+    }
+
+    .navbar-brand span {
+      color: var(--primary);
+    }
+
+    .nav-link {
+      color: var(--soft-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-left: 12px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    .btn-primary-custom {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      border-radius: 999px;
+      padding: 13px 26px;
+      font-weight: 700;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 16px 35px rgba(37, 99, 235, 0.24);
+      transition: 0.3s ease;
+    }
+
+    .btn-primary-custom:hover {
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 22px 45px rgba(37, 99, 235, 0.32);
+    }
+
+    .btn-outline-custom {
+      border: 1.5px solid var(--border);
+      color: var(--dark);
+      background: var(--white);
+      border-radius: 999px;
+      padding: 13px 26px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -1.2px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 130px 0 80px;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.17), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 6vw, 5.4rem);
+      font-weight: 800;
+      letter-spacing: -2.8px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.9;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .hero-card {
+      position: relative;
+      background: var(--white);
+      padding: 18px;
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      max-width: 420px;
+      margin-left: auto;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 28px;
+    }
+
+    .profile-floating {
+      position: absolute;
+      bottom: 32px;
+      left: -35px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      padding: 18px 20px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      max-width: 240px;
+    }
+
+    .profile-floating h5 {
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .profile-floating p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .social-links a {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-5px);
+    }
+
+    .stats-wrap {
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 560px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.05);
+    }
+
+    .stat-card h4 {
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .stat-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 0.88rem;
+    }
+
+    .card-clean {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.055);
+      transition: 0.3s ease;
+    }
+
+    .card-clean:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .card-clean h4,
+    .card-clean h5 {
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .card-clean p,
+    .card-clean li {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--soft-dark);
+      border: 1px solid var(--border);
+      margin: 6px;
+      font-weight: 700;
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.04);
+    }
+
+    .skill-pill i {
+      color: var(--primary);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #dbeafe;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background: var(--primary);
+      border: 4px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px #dbeafe;
+    }
+
+    .timeline-item h5 {
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item .date {
+      display: inline-block;
+      color: var(--primary);
+      background: #eff6ff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .project-img {
+      height: 245px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 26px;
+    }
+
+    .project-category {
+      color: var(--primary);
+      background: #eff6ff;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.78rem;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .project-tags span {
+      background: #f1f5f9;
+      color: var(--soft-dark);
+      font-size: 0.78rem;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-card {
+        margin: 40px auto 0;
+      }
+
+      .profile-floating {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -35px;
+      }
+
+      .stats-wrap {
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .section-padding {
+        padding: 75px 0;
+      }
+
+      .hero-card img {
+        height: 410px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.4px;
+      }
+
+      .btn-primary-custom,
+      .btn-outline-custom {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
-
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>Tentang Saya</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Sertifikat</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Kontak Saya</span></a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <img src="pict1.jpeg" alt="">
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Irma Sena Marliyana</h2>
-            <p>I'm <span class="typed" data-typed-items="Collage Student, Developer, Content Writer">Development</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <a href="https://www.tiktok.com/@shenjaay?_t=8nlhiL9LISf&_r=1"><i class="bi bi-tiktok"></i></a>
-              <a href="https://github.com/dashboard"><i class="bi bi-github"></i></a>
-              <a href="https://www.instagram.com/irmasena.m?igsh=NGh6YTJkcGVwenBs&utm_source=qr"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/irma-marliyana-b36b921b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Tentang Saya</h2>
-        <p>Mahasiswa Politeknik Negeri Cilacap Semester 2 Program Studi D3 Teknik Informatika Jurusan Komputer dan Bisnis.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="sena pict.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Front-End Developer &amp; Informatics Engineering Student</h2>
-            <p class="fst-italic py-3">
-              Driven by curiosity, guided by discipline.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday :</strong> <span>11 April 2005</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone :</strong> <span>(+62) 822 2099 8854</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City :</strong> <span>Cilacap, IDN</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Address :</strong> <span>Cilacap, Central Java, Indonesia</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age :</strong> <span>21</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree :</strong> <span>D3 Informatics Engineering (in progress)</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span>irmaashe@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Instansi :</strong> <span>Politeknik Negeri Cilacap</span></li>
-                </ul>
-              </div>
-            </div>
-            <p class="py-3">
-             I am an active Informatics Engineering student (D3) at Politeknik Negeri Cilacap, currently in my second year. I have hands-on experience in front-end web development using HTML, CSS, JavaScript, PHP, and Bootstrap, and a growing interest in machine learning and deep learning. 
-              Beyond academics, I serve as Administrative Staff at BEM Politeknik Negeri Cilacap, where I manage organizational documents, coordinate events, and maintain membership databases. I have also competed in national-level competitions including PKM IoT (Kemendikbudristek) and KMIPN VI (Politeknik Negeri Jakarta). I thrive in collaborative environments and am committed to continuous learning in technology.
-              <em>"fokus skill, pengalaman, dan tujuan karier"</em>
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Statistik</h2>
-        <p>Statistik Hard skills</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Bootstrap</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p class="text-justify"></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Edukasi</h3>
-            <div class="resume-item">Saya mahasiswa aktif semester 2 Teknik Informatika dengan pengetahuan dan keterampilan 
-              yang kuat dalam pemrograman, pengembangan perangkat lunak, dan jaringan komputer. 
-              Selama masa studi, saya telah mempelajari berbagai bahasa pemrograman seperti PHP, HTML, 
-              dan CSS JavaScript, serta memiliki pengalaman praktis dalam pembuatan sebuah 
-              projek/aplikasi. Saya juga familiar dengan basis data, administrasi sistem, dan keamanan 
-              jaringan. Saya memiliki kemampuan analitis yang baik, mampu bekerja secara tim maupun 
-              individu, dan berusaha untuk mengikuti perkembangan teknologi terbaru.</div>
-
-            <h3 class="resume-title">Pendidikan</h3>
-            <div class="resume-item">
-              <h4>Politeknik Negeri Cilacap - Cilacap, Indonesia</h4>
-              <h5>Okt 2023 – Sekarang </h5>
-              <p><em>D3 Teknik Informatika  </em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>SMA NEGERI 2 CILACAP - Cilacap, Indonesia</h4>
-              <h5>2020 - 2023</h5>
-              <p><em>Ilmu Pengetahuan Alam | Nilai Rata-Rata 90,28 / 100 </em></p>
-              </p>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Pengalaman Kompetisi</h3>
-            <div class="resume-item">
-              <ul>
-                <li>Kompetisi (2023) : Karya Tulis Ilmiah Dies Natalis Ke - 15  – Politeknik Negeri Cilacap</li>
-                <li>Kompetisi (2024) : Program Kreativitas Mahasiswa Bidang Iot – Kemendikbudristek</li>
-                <li>Kompetisi (2024) : Kompetisi Mahasiswa Informatika Politeknik Nasional (KMIPN) 
-                  VI – Politeknik Negeri Jakarta </li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Kemampuan</h3>
-            <div class="resume-item">
-              <p><b>Bahasa</b> : Kemampuan Bahasa Indonesia, Terbatas Bahasa Inggris. </p>
-              <p><b>Bahasa Pemrograman</b> : PHP, HTML, CSS JavaScript. </p>
-              <p><b>Hard Skill</b> : Microsoft Office (Word, Excel, Power Point).  </p>
-              <p><b>Soft Skill</b> : Time Management, Kerjasama Tim, Komunikasi, Problem Solving, Public 
-                Speaking, MC, Moderator. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Pengalaman Organisasi</h3>
-            <div class="resume-item">
-              <h4>Staff Administrasi - BEM Politeknik Negeri Cilacap</h4>
-              <p><em>Departemen Administrasi dan Kesekretariatan</em></p>
-              <p>Nov 2023 – Sekarang</p>
-              <ul>
-                <li>Mengorganisir dan mengarsipkan dokumen-dokumen penting BEM, termasuk surat 
-                  masuk dan keluar, laporan kegiatan, dan notulen rapat.</li>
-                <li>Membantu dalam penjadwalan rapat, koordinasi kegiatan, serta memastikan 
-                  ketersediaan ruang dan peralatan yang diperlukan.</li>
-                <li>Memelihara database anggota BEM dan catatan kegiatan, memastikan semua data 
-                  tersimpan dengan rapi dan mudah diakses.</li>
-                <li>Membantu dalam penyusunan laporan bulanan dan tahunan mengenai kegiatan 
-                  departemen, serta menyiapkan bahan presentasi jika diperlukan.</li>
-                <li>Menyediakan dukungan administratif untuk seluruh anggota BEM, termasuk penyiapan 
-                  dokumen, pencetakan, dan pengelolaan inventaris kantor. </li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Pasukan Pandu Bercahaya 07 - Kwarcab Cilacap</h4>
-              <p><em>Bendahara Umum</em></p>
-              <p>Agt 2020 – Agt 2022</p>
-              <ul>
-                <li>Menyusun laporan keuangan secara berkala, seperti laporan bulanan, dan tahunan. </li>
-                <li>Menyampaikan laporan keuangan kepada pengurus dan anggota dalam rapat rutin atau 
-                  khusus. </li>
-                <li>Menjaga transparansi dalam pengelolaan keuangan untuk membangun kepercayaan 
-                  anggota dan pemangku kepentingan. </li>
-                <li>Mengarsipkan semua dokumen keuangan, seperti bukti transaksi, kuitansi, dan 
-                  dokumen pendukung lainnya. </li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            
-            <h3 class="resume-title">Contact</h3>
-            <div class="resume-item">
-              <h3>Irma Sena Marliyana</h3>
-              <ul>
-                <li>email : irmaashe.stu@pnc.ac.id</li>
-                <li>no telp : 0822 2099 8854</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Keterampilan serta Karya yang telah diciptakan sedemikian rupa.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Project</li>
-            <li data-filter=".filter-product">Event</li>
-            <li data-filter=".filter-branding">Design</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="foto6.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Project 1</h4>
-                <p>Output Web Portfolio Personal</p>
-                <a href="foto6.png" title="Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="12.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Event 1</h4>
-                <p>Visi Misi Ketua dan Wakil Ketua BEM PNC</p>
-                <a href="12.jpg" title="Event 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="foto1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Design Poster 1</h4>
-                <p>Infografis</p>
-                <a href="foto1.jpg" title="Design Poster 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="foto7.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Project 2</h4>
-                <p>Output Web Form</p>
-                <a href="foto7.png" title="Project 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="foto3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Event 2</h4>
-                <p>Duta Kampus</p>
-                <a href="foto3.jpg" title="Event 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="foto2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Design Poster 2</h4>
-                <p>Organization</p>
-                <a href="foto2.jpg" title="Design Poster 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="foto8.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Project 3</h4>
-                <p>Output Web Colour Style</p>
-                <a href="foto8.png" title="Project 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="foto4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Event 3</h4>
-                <p>MC Training Internal</p>
-                <a href="foto4.jpg" title="Event 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="foto5.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Design Poster 3</h4>
-                <p>UKM</p>
-                <a href="foto5.png" title="Design Poster 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sertifikat</h2>
-        <p>Sertifikasi dari beberapa event yang diikutsertakan baik akademik dan non akademik</p>
-      </div><!-- End Section Title -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100"></div>
-          <div class="row gx-2">
-            <div class="col">
-              <h2><img src="pot1.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot2.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot3.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot4.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot5.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot6.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot8.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot9.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot10.png" width="550" height="370"></h2>
-            </div>
-            <div class="col">
-              <h2><img src="pot11.png" width="550" height="370"></h2>
-            </div>
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Kontak Saya</h2>
-        <p>Kami Terima Masukkan dan Saran dari anda</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Alamat</h3>
-                <p>Cilacap, Indonesia, IDN 53223</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Hubungi</h3>
-                <p>+62 822 2099 8854</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p>irmaashe.stu@pnc.ac.id</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Nama" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subjek" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Masukkan dan Saran" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Masukanmu telah tersampaikan, terimakasih!</div>
-
-                  <button type="submit">Kirim Masukkan dan Saran</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <h3 class="sitename">Irma Sena Marliyana</h3>
-      <p>thank you dear!</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.tiktok.com/@shenjaay?_t=8nlhiL9LISf&_r=1"><i class="bi bi-tiktok"></i></a>
-              <a href="https://github.com/dashboard"><i class="bi bi-github"></i></a>
-              <a href="https://www.instagram.com/irmasena.m?igsh=NGh6YTJkcGVwenBs&utm_source=qr"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/irma-marliyana-b36b921b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="bi bi-linkedin"></i></a>
+      <a class="navbar-brand" href="#home">Irma<span>Sena</span>.</a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list fs-1"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Irma Sena Marliyana</strong> <span>All Rights Reserved</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <div class="hero-badge">
+            <i class="bi bi-stars"></i>
+            Front-End Developer Portfolio
+          </div>
+
+          <h1>
+            Hi, I'm <span>Irma Sena Marliyana</span>
+          </h1>
+
+          <p class="hero-desc">
+            Informatics Engineering student at Politeknik Negeri Cilacap with a strong interest in
+            front-end development, responsive web design, UI/UX, and API integration. I build clean,
+            accessible, and user-friendly digital experiences.
+          </p>
+
+          <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
+            <a href="#projects" class="btn-primary-custom">
+              View My Work <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/irmasenam" target="_blank" class="btn-outline-custom">
+              LinkedIn Profile <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+
+          <div class="social-links justify-content-lg-start justify-content-center">
+            <a href="https://github.com/IRMASENAM" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/irmasenam" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:irmaashe@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="https://www.instagram.com/irmasena.m" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+
+          <div class="stats-wrap">
+            <div class="stat-card">
+              <h4>6th</h4>
+              <p>Semester Student</p>
+            </div>
+            <div class="stat-card">
+              <h4>10+</h4>
+              <p>Certificates</p>
+            </div>
+            <div class="stat-card">
+              <h4>3+</h4>
+              <p>Web Projects</p>
+            </div>
+          </div>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <img src="pose26.png" alt="Irma Sena Marliyana">
+            <div class="profile-floating">
+              <h5>Open to Growth</h5>
+              <p>Front-End • UI/UX • Web Development</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- About -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">About Me</span>
+        <h2>Learning, Building, and Growing Through Technology</h2>
+        <p>
+          I am passionate about creating responsive and meaningful web interfaces.
+          My goal is to keep improving as a Front-End Developer through real projects,
+          collaboration, and continuous learning.
+        </p>
+      </div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="card-clean">
+            <div class="icon-box"><i class="bi bi-mortarboard"></i></div>
+            <h4>Education</h4>
+            <p>
+              D3 Informatics Engineering student at Politeknik Negeri Cilacap,
+              currently focused on web development and software project implementation.
+            </p>
+          </div>
+        </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <div class="col-lg-4">
+          <div class="card-clean">
+            <div class="icon-box"><i class="bi bi-code-slash"></i></div>
+            <h4>Development Focus</h4>
+            <p>
+              Interested in front-end development, responsive design, UI/UX, API integration,
+              and building user-friendly web applications.
+            </p>
+          </div>
+        </div>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+        <div class="col-lg-4">
+          <div class="card-clean">
+            <div class="icon-box"><i class="bi bi-people"></i></div>
+            <h4>Collaboration</h4>
+            <p>
+              Experienced in teamwork, organization administration, event coordination,
+              public speaking, and communication through campus activities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-clean mt-4">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-7">
+            <h4>Professional Summary</h4>
+            <p class="mb-0">
+              I have hands-on experience in building web interfaces using HTML, CSS, JavaScript,
+              Bootstrap, and React. I enjoy transforming ideas into clean digital products and
+              continuously improving my technical and design skills.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="stat-card">
+                  <h4>Front-End</h4>
+                  <p>Main Interest</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card">
+                  <h4>UI/UX</h4>
+                  <p>Design Interest</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card">
+                  <h4>GitHub</h4>
+                  <p>Version Control</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card">
+                  <h4>Team</h4>
+                  <p>Collaboration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section-padding bg-white" id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">Skills</span>
+        <h2>Technical Skills & Tools</h2>
+        <p>
+          A set of technologies and tools that support my work in web development,
+          interface design, and project collaboration.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <span class="skill-pill"><i class="bi bi-filetype-html"></i> HTML</span>
+        <span class="skill-pill"><i class="bi bi-filetype-css"></i> CSS</span>
+        <span class="skill-pill"><i class="bi bi-filetype-js"></i> JavaScript</span>
+        <span class="skill-pill"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+        <span class="skill-pill"><i class="bi bi-code-square"></i> React.js</span>
+        <span class="skill-pill"><i class="bi bi-wind"></i> Tailwind CSS</span>
+        <span class="skill-pill"><i class="bi bi-plug"></i> REST API</span>
+        <span class="skill-pill"><i class="bi bi-git"></i> Git</span>
+        <span class="skill-pill"><i class="bi bi-github"></i> GitHub</span>
+        <span class="skill-pill"><i class="bi bi-palette"></i> Figma</span>
+        <span class="skill-pill"><i class="bi bi-file-earmark-text"></i> Microsoft Office</span>
+        <span class="skill-pill"><i class="bi bi-people"></i> Team Collaboration</span>
+        <span class="skill-pill"><i class="bi bi-chat-dots"></i> Communication</span>
+        <span class="skill-pill"><i class="bi bi-lightbulb"></i> Problem Solving</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section-padding" id="experience">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">Resume</span>
+        <h2>Education & Experience</h2>
+        <p>
+          My academic background, organization experience, and competition journey
+          have helped me develop both technical and soft skills.
+        </p>
+      </div>
+
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <div class="card-clean">
+            <h4 class="mb-4">Education</h4>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="date">2023 - Present</span>
+                <h5>Politeknik Negeri Cilacap</h5>
+                <p>D3 Informatics Engineering</p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="date">2020 - 2023</span>
+                <h5>SMA Negeri 2 Cilacap</h5>
+                <p>Natural Science Major | Average Score: 90.28 / 100</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-clean">
+            <h4 class="mb-4">Organization Experience</h4>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="date">Nov 2023 - Present</span>
+                <h5>Administrative Staff - BEM Politeknik Negeri Cilacap</h5>
+                <p>
+                  Managed organizational documents, meeting schedules, member databases,
+                  reports, and administrative support for campus organization activities.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="date">Aug 2020 - Aug 2022</span>
+                <h5>General Treasurer - Pasukan Pandu Bercahaya 07</h5>
+                <p>
+                  Managed financial records, transaction documents, financial reports,
+                  and supported transparency in organization financial administration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-clean mt-4">
+        <h4>Competition Experience</h4>
+        <ul class="mb-0">
+          <li>Scientific Writing Competition - 15th Anniversary of Politeknik Negeri Cilacap</li>
+          <li>Student Creativity Program in IoT - Kemendikbudristek</li>
+          <li>National Polytechnic Informatics Student Competition VI - Politeknik Negeri Jakarta</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section-padding bg-white" id="projects">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">Portfolio</span>
+        <h2>Selected Projects & Creative Works</h2>
+        <p>
+          A collection of web projects, event documentation, and design works that represent
+          my development journey and creative experience.
+        </p>
+      </div>
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card-clean project-card">
+            <img src="foto6.png" class="project-img" alt="Personal Portfolio Website">
+            <div class="project-body">
+              <span class="project-category">Web Project</span>
+              <h5>Personal Portfolio Website</h5>
+              <p>A personal portfolio website designed to showcase profile, skills, works, and contact information.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card-clean project-card">
+            <img src="foto7.png" class="project-img" alt="Web Form Interface">
+            <div class="project-body">
+              <span class="project-category">Web Project</span>
+              <h5>Web Form Interface</h5>
+              <p>A clean web form interface focused on input structure, layout consistency, and usability.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>UI Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card-clean project-card">
+            <img src="foto8.png" class="project-img" alt="Color Style Exploration">
+            <div class="project-body">
+              <span class="project-category">Web Design</span>
+              <h5>Website Color Style Exploration</h5>
+              <p>A visual exploration of color harmony, layout balance, and modern interface styling.</p>
+              <div class="project-tags">
+                <span>CSS</span><span>Design</span><span>Creative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+                <!-- Event -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-clean project-card">
+            <img src="12.jpg" class="project-img" alt="BEM Activity">
+            <div class="project-body">
+              <span class="project-category">Event</span>
+              <h5>BEM Vision & Mission Event</h5>
+              <p>
+                Participated in campus organization activities involving
+                communication, leadership, and teamwork.
+              </p>
+
+              <div class="project-tags">
+                <span>Leadership</span>
+                <span>Teamwork</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-clean project-card">
+            <img src="foto3.jpg" class="project-img" alt="Campus Ambassador">
+            <div class="project-body">
+              <span class="project-category">Event</span>
+              <h5>Campus Ambassador Activity</h5>
+              <p>
+                Engaged in university representation activities,
+                communication, and student interaction programs.
+              </p>
+
+              <div class="project-tags">
+                <span>Communication</span>
+                <span>Public Speaking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card-clean project-card">
+            <img src="foto1.jpg" class="project-img" alt="Design Work">
+            <div class="project-body">
+              <span class="project-category">Design</span>
+              <h5>Infographic Design</h5>
+              <p>
+                Designed visual communication materials with focus on
+                readability and aesthetic presentation.
+              </p>
+
+              <div class="project-tags">
+                <span>Canva</span>
+                <span>Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+<!-- Certificates -->
+
+<section class="section-padding" id="certificates">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-label">
+Certificates
+</span>
+
+<h2>
+Learning Journey & Certifications
+</h2>
+
+<p>
+Certifications and achievements from academic activities,
+training programs, competitions, and self-development initiatives.
+</p>
+
+</div>
+
+<div class="row gy-4">
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot1.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Certificate Achievement</h5>
+
+<p>
+Academic or professional learning certification.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot2.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Workshop Certificate</h5>
+
+<p>
+Training participation and learning activity certification.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot3.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Competition Certificate</h5>
+
+<p>
+Recognition for participation and contribution.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot4.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Technology Program</h5>
+
+<p>
+Learning and technical development certification.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot5.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Professional Development</h5>
+
+<p>
+Skill improvement and career preparation activity.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot6.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Academic Program</h5>
+
+<p>
+Academic and organizational participation.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot8.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Training Program</h5>
+
+<p>
+Hands-on experience and practical activities.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot9.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Competition Activity</h5>
+
+<p>
+Participation in student and technology events.
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card-clean project-card">
+
+<img src="pot10.png" class="project-img">
+
+<div class="project-body">
+
+<h5>Technology Certificate</h5>
+
+<p>
+Technology-related learning achievement.
+</p>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section class="section-padding bg-white" id="contact">
+
+<div class="container">
+
+<div class="card-clean p-5">
+
+<div class="row align-items-center">
+
+<div class="col-lg-8">
+
+<span class="section-label">
+Let's Connect
+</span>
+
+<h2 class="mb-4">
+Interested in Working Together?
+</h2>
+
+<p class="text-muted">
+
+I am open to internships, collaborations,
+learning opportunities, and technology projects.
+
+</p>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="d-grid gap-3">
+
+<a href="mailto:irmaashe@gmail.com"
+class="btn-primary-custom justify-content-center">
+
+<i class="bi bi-envelope"></i>
+
+Send Email
+
+</a>
+
+<a href="https://www.linkedin.com/in/irmasenam"
+target="_blank"
+class="btn-outline-custom justify-content-center">
+
+<i class="bi bi-linkedin"></i>
+
+LinkedIn
+
+</a>
+
+<a href="https://github.com/IRMASENAM"
+target="_blank"
+class="btn-outline-custom justify-content-center">
+
+<i class="bi bi-github"></i>
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer style="
+background:#0f172a;
+padding:60px 0;
+color:white;
+text-align:center;
+">
+
+<div class="container">
+
+<h3 style="
+font-weight:800;
+margin-bottom:15px;
+">
+
+Irma Sena Marliyana
+
+</h3>
+
+<p style="
+color:#94a3b8;
+max-width:600px;
+margin:auto;
+">
+
+Designed and developed with passion for learning,
+creativity, and continuous growth.
+
+</p>
+
+<div class="social-links justify-content-center mt-4">
+
+<a href="https://github.com/IRMASENAM">
+<i class="bi bi-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/irmasenam">
+<i class="bi bi-linkedin"></i>
+</a>
+
+<a href="mailto:irmaashe@gmail.com">
+<i class="bi bi-envelope"></i>
+</a>
+
+</div>
+
+<hr style="
+margin:35px 0;
+border-color:#334155;
+">
+
+<p style="color:#94a3b8">
+
+© 2026 Irma Sena Marliyana.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
